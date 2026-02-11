@@ -21,7 +21,7 @@ The project is designed with industry practices, making it suitable for internsh
 
 ## 📂 Dataset Sources
 - Historical Data: Kaggle cryptocurrency datasets
-- Live Data: CoinGecko API
+- Live Data: Binanace API
 
 ## 🗂 Project Structure
 crypto-time-series-analysis/
@@ -32,7 +32,7 @@ crypto-time-series-analysis/
 ├── README.md
 
 ## ⚙️ Tech Stack
-Python, Pandas, NumPy, Statsmodels, Prophet, TensorFlow, Scikit-learn, CoinGecko API, Power BI, Streamlit
+Python, Pandas, NumPy, Statsmodels, Prophet, TensorFlow, Scikit-learn, Binance API, Power BI, Streamlit
 
 ## 📊 Final Output
 date | crypto | forecast_price | model
