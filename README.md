@@ -38,7 +38,7 @@ Python, Pandas, NumPy, Statsmodels, Prophet, TensorFlow, Scikit-learn, Binance A
 date | crypto | forecast_price | model
 
 ## 📈 Dashboards
-Power BI and Streamlit dashboards for interactive analysis.
+Streamlit dashboards for interactive analysis.
 
 ## 🧪 How to Run
 pip install -r requirements.txt
