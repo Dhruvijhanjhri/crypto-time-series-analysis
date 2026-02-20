@@ -1,21 +1,15 @@
-import pandas as pd
 import os
+import pandas as pd
 
-DATA_DIR = "data"
 MASTER_FILE = "final_crypto_forecast_master.csv"
 
 def load_forecast():
-    """
-    Load and clean forecast master dataset
-    """
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    DATA_DIR = os.path.join(BASE_DIR, "data")
     path = os.path.join(DATA_DIR, MASTER_FILE)
 
     if not os.path.exists(path):
-        raise FileNotFoundError(f"{MASTER_FILE} not found in data folder")
+        raise FileNotFoundError(f"{MASTER_FILE} not found at {path}")
 
     df = pd.read_csv(path)
-
-    df["date"] = pd.to_datetime(df["date"], errors="coerce")
-    df = df.dropna(subset=["date", "forecast_price", "crypto", "model"])
-
     return df
