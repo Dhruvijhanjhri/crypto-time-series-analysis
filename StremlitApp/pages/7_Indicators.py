@@ -31,7 +31,7 @@ st.markdown("""
 DATA_PATH = os.path.join("data", "final_crypto_forecast_master.csv")
 df = load_forecast()
 
-df = pd.read_csv(DATA_PATH)
+#df = pd.read_csv(DATA_PATH)
 df["date"] = pd.to_datetime(df["date"], errors="coerce")
 df["forecast_price"] = pd.to_numeric(df["forecast_price"], errors="coerce")
 df = df.dropna(subset=["date", "forecast_price"])
