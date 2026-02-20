@@ -4,6 +4,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
+from utils.data_loader import load_forecast
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -28,7 +29,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ---------------- LOAD DATA ----------------
-DATA_PATH = os.path.join("data", "final_crypto_forecast_master.csv")
+#DATA_PATH = os.path.join("data", "final_crypto_forecast_master.csv")
+df = load_forecast()
 
 df = pd.read_csv(DATA_PATH)
 df["date"] = pd.to_datetime(df["date"], errors="coerce")
